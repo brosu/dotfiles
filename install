@@ -1,0 +1,6 @@
+#!/usr/bin/sh
+set -e
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b /usr/local/bin
+if ! [ -d ~/.local/share/chezmoi ]; then
+    chezmoi init brosu
+fi

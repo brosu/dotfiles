@@ -1,0 +1,16 @@
+FROM --platform=linux/amd64 ubuntu:jammy-20230522
+RUN apt-get update \
+    # && apt-get install -y git \
+    # && apt-get install -y python3 \
+    && apt-get install -y curl \
+    && apt-get install -y vim
+
+ADD . /root/.local/share/chezmoi
+RUN /root/.local/share/chezmoi/install
+ENTRYPOINT chezmoi data && chezmoi apply
+
+
+# RUN git config --global credential.helper store
+# RUN echo "https://brosu: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@github.com" > ~/.git-credentials
+# git clone git@github.com/brosu/init.git
+# RUN mkdir -p /app && cd /app && git clone https://brosu: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@github.com/brosu/init.git
