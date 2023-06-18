@@ -1,0 +1,5 @@
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+PATH="$(brew --prefix)/lib/ruby/gems/3.2.0/bin:${PATH}"
+[[ -d "$(ruby -e 'puts Gem.user_dir')" ]] && 
+    PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
+PATH="$HOME/.local/bin:$PATH"

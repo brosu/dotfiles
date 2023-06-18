@@ -1,16 +1,14 @@
 #!/bin/sh
 
-{{- if eq .chezmoi.os "darwin" -}}
-    {{ if eq .host.arch "arm64" -}}
-        eval $(/opt/homebrew/bin/brew shellenv)
-    {{- else }}
-        eval $(/usr/local/bin/brew shellenv)
-    {{- end }}
-{{- else if eq .chezmoi.osRelease.id "ubuntu" }}
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-{{- end }}
+{{ includeTemplate "brew_load" . }}
 
+# https://github.com/Homebrew/homebrew-bundle
 brew update
 brew bundle --verbose --no-lock --file=/dev/stdin <<EOF
-brew "jq"
+{{ includeTemplate "brewfile" . }}
 EOF
+
+grep -rne "brew shellenv" ~/.bashrc > /dev/null || \
+    echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
+
+gem install colorls

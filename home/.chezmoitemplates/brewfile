@@ -1,0 +1,34 @@
+{{- $brews := list -}}
+{{- $dismissed_brews := list -}}
+
+{{- $dismissed_brews = list
+"lf" "terminal file manager; image preview works with kitty but not iterm"
+"minikube"
+"qemu"
+"vifm" "terminal file manager; image preview hard to setup & flickers"
+-}}
+
+{{- $brews = list
+"autojump"
+"docker-compose"
+"fzf"
+"how2terminal/how2/how2"
+"jdtls"
+"jq"
+"k9s"
+"ncdu"
+"neovim"
+"nvm"
+"pipx"
+"poppler"
+"ranger"
+"ripgrep"
+"ruby"
+"sheldon"
+"yq"
+"zsh"
+-}}
+
+{{ range ($brews | sortAlpha | uniq) }}
+brew "{{ . }}"
+{{- end }}

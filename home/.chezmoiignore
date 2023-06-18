@@ -1,2 +1,3 @@
 README.md
 install
+.config/nvim/plugin/packer_compiled.lua

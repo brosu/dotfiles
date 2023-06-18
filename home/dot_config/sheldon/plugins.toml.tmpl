@@ -1,0 +1,57 @@
+# `sheldon` configuration file
+# ----------------------------
+#
+# You can modify this file directly or you can use one of the following
+# `sheldon` commands which are provided to assist in editing the config file:
+#
+# - `sheldon add` to add a new plugin to the config file
+# - `sheldon edit` to open up the config file in the default editor
+# - `sheldon remove` to remove a plugin from the config file
+#
+# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+
+shell = "zsh"
+
+[plugins]
+{{- range $k, $v := .install.sheldon }}
+
+[plugins.{{ ( split "/" $k )._1 }}]
+github = "{{$k}}"
+    {{- if $v }}
+        {{- $applies_values := list "fpath" "path" "source" "PATH" }}
+        {{- $values:= ( split " " $v ) }}
+        {{- $apply_value := "" }}
+        {{- $tag_value := "" }}
+        {{- $rev_value := "" }}
+
+        {{- range $_, $value := $values}}
+            {{- if has $value $applies_values }}
+                {{- $apply_value = (print $apply_value ", \"" $value "\"") }}
+            {{- else}}
+                {{- if contains "." $value }}
+                    {{- $tag_value = $value }}
+                {{- else }}
+                    {{- $rev_value = $value }}
+                {{- end }}
+            {{- end }}
+        {{- end }}
+
+        {{- if ne $tag_value "" }}
+tag = "{{$tag_value}}"
+        {{- end}}
+        {{- if ne $rev_value "" }}
+rev = "{{$rev_value}}"
+        {{- end}}
+
+        {{- $new_len := len $apply_value }}
+        {{- if ge $new_len 3 }}
+apply = [{{ substr 2 $new_len $apply_value }}]
+        {{- end}}
+    {{- end }}
+{{- end }}
+
+[templates]
+source ={{ "'{{ hooks | get: \"pre\" | nl }}{% for file in files %}source \"{{ file }}\"{% endfor %}{{ hooks | get: \"post\" | nl }}'" }}
+PATH = {{ "'export PATH=\"{{ dir }}:$PATH\"'" }}
+path = {{ "'export path=( \"{{ dir }}\" $path )'" }}
+fpath = {{ "'export fpath=( \"{{ dir }}\" $fpath )'" }}

@@ -1,0 +1,9 @@
+install:
+  sheldon:
+    marlonrichert/zsh-autocomplete: 22.01.21
+    Tarrasch/zsh-bd: d4a55e6
+    sindresorhus/pure: fpath path source PATH v1.21.0
+    # zsh-users/zsh-syntax-highlighting:
+    zdharma-continuum/fast-syntax-highlighting: 13d7b4e
+    # https://github.com/wfxr/forgit
+    olets/zsh-abbr: fpath source v5.1.0

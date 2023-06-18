@@ -2,7 +2,8 @@ FROM --platform=linux/amd64 br/dotfiles_test:latest
 
 ADD . /root/.local/share/chezmoi
 RUN /root/.local/share/chezmoi/install
-ENTRYPOINT chezmoi data && chezmoi apply
+CMD /bin/bash
+ENTRYPOINT ["/root/.local/share/chezmoi/test/start.sh"]
 
 
 # RUN git config --global credential.helper store

@@ -7,8 +7,6 @@ RUN apt-get update \
 
 ADD . /root/.local/share/chezmoi
 RUN /root/.local/share/chezmoi/install
-ENTRYPOINT chezmoi data && chezmoi apply
-
 
 # RUN git config --global credential.helper store
 # RUN echo "https://brosu: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@github.com" > ~/.git-credentials
