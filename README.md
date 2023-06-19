@@ -6,7 +6,7 @@
     - repo
     - read:org
     - admin:public_key
-1. Run
+1. Run with a sudoer
   ```sh
   sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply brosu
   ```
