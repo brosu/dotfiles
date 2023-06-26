@@ -4,11 +4,9 @@
 
 # https://github.com/Homebrew/homebrew-bundle
 brew update
-brew bundle --verbose --no-lock --file=/dev/stdin <<EOF
-{{ includeTemplate "brewfile" . }}
-EOF
+brew install {{ join " " $.install.brew }}
 
-grep -rne "brew shellenv" ~/.bashrc > /dev/null || \
-    echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
-
-gem install colorls
+if [ -f ~/.bashrc ]; then
+    grep -rne "brew shellenv" ~/.bashrc > /dev/null || \
+        echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
+fi

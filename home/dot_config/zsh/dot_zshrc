@@ -1,7 +1,11 @@
+for conf in "$ZDOTDIR"/settings/**/*; do
+  source "${conf}" > /dev/null
+done
+unset conf
+
 eval "$(sheldon source)"
 
 # https://stackoverflow.com/questions/67136714/how-to-properly-call-compinit-and-bashcompinit-in-zsh
-
 autoload -U promptinit; promptinit
 prompt pure
 export PURE_PROMPT_SYMBOL='>' # https://github.com/sindresorhus/pure/issues/561
@@ -11,8 +15,3 @@ fpath=(
     # $ASDF_DATA_DIR/completions
     $fpath
 )
-
-for conf in "$ZDOTDIR"/settings/**/*; do
-  source "${conf}" > /dev/null
-done
-unset conf

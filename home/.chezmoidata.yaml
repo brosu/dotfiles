@@ -7,3 +7,29 @@ install:
     zdharma-continuum/fast-syntax-highlighting: 13d7b4e
     # https://github.com/wfxr/forgit
     olets/zsh-abbr: fpath source v5.1.0
+    z-shell/zsh-lsd: v1.0.0
+  brew:
+    - autojump
+    - docker-compose
+    - fzf
+    - how2terminal/how2/how2
+    - jdtls
+    - jq
+    - k9s
+    - ncdu
+    - neovim
+    - nvm
+    - pipx
+    - poppler
+    - ranger
+    - ripgrep
+    - ruby
+    - sheldon
+    - yq
+    - zsh
+    - lsd
+    - wget
+    - txn2/tap/kubefwd
+    - kubectx
+    - multipass
+    - helm

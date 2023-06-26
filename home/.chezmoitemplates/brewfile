@@ -23,10 +23,10 @@
 "poppler"
 "ranger"
 "ripgrep"
-"ruby"
 "sheldon"
 "yq"
 "zsh"
+"lsd"
 -}}
 
 {{ range ($brews | sortAlpha | uniq) }}

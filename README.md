@@ -11,6 +11,10 @@
   sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply brosu
   ```
   Use the token generated previously as password
+  Note: On MacOS, need to execute something as sudo beforehand:
+  ```sh
+  sudo cd .
+  ```
 
 # Test
 Run
