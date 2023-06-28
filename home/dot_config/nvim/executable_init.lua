@@ -19,6 +19,7 @@ require("br.plugins.dap")
 require("br.core.keymaps")
 require("br.plugins.which-key")
 require("br.plugins.hydra")
+require("br.plugins.onedark")
 
 -- Enable Comment.nvim
 require("Comment").setup()
