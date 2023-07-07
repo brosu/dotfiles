@@ -6,8 +6,11 @@ install:
     # zsh-users/zsh-syntax-highlighting:
     zdharma-continuum/fast-syntax-highlighting: 13d7b4e
     # https://github.com/wfxr/forgit
-    olets/zsh-abbr: fpath source v5.1.0
-    z-shell/zsh-lsd: v1.0.0
+    # olets/zsh-abbr: fpath source v5.1.0
+    # z-shell/zsh-lsd: v1.0.0
+    Dbz/kube-aliases:
+    # MenkeTechnologies/zsh-expand:
+    greymd/docker-zsh-completion:
   brew:
     - autojump
     - docker-compose
@@ -27,9 +30,11 @@ install:
     - sheldon
     - yq
     - zsh
-    - lsd
+    # - lsd
     - wget
     - txn2/tap/kubefwd
     - kubectx
     - multipass
     - helm
+    - diff-so-fancy
+    - exa

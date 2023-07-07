@@ -2,7 +2,8 @@ for conf in "$ZDOTDIR"/settings/**/*; do
   source "${conf}" > /dev/null
 done
 unset conf
-
+autoload -Uz compinit
+compinit
 eval "$(sheldon source)"
 
 # https://stackoverflow.com/questions/67136714/how-to-properly-call-compinit-and-bashcompinit-in-zsh
