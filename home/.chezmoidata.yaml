@@ -30,7 +30,7 @@ install:
     - sheldon
     - yq
     - zsh
-    # - lsd
+    - lazydocker
     - wget
     - txn2/tap/kubefwd
     - kubectx
@@ -38,3 +38,4 @@ install:
     - helm
     - diff-so-fancy
     - exa
+    - karabiner-elements

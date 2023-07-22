@@ -1,4 +1,4 @@
-alias lzd=~/.local/bin/lazydocker
+alias lzd=lazydocker
 alias reload=". ~/.config/zsh/.zshrc"
 alias vi="nvim"
 alias v="nvim"
