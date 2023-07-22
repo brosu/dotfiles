@@ -53,15 +53,15 @@ export const arrowMode = {
   ",": toKey("↑", "⌘"),
   ".": toKey("→", "⌘"),
 
-  y: toKey("←", "⌥"),
-  u: toKey("↓", "⌥"),
-  i: toKey("↑", "⌥"),
-  o: toKey("→", "⌥"),
+  y: toKey("←", "⌃"),
+  u: toKey("↓", "⌃"),
+  i: toKey("↑", "⌃"),
+  o: toKey("→", "⌃"),
 
-  6: toKey("←", "⌃"),
-  7: toKey("↓", "⌃"),
-  8: toKey("↑", "⌃"),
-  9: toKey("→", "⌃"),
+  6: toKey("←", "⌥"),
+  7: toKey("↓", "⌥"),
+  8: toKey("↑", "⌥"),
+  9: toKey("→", "⌥"),
 };
 
 const withShift = (e: ToEvent) => ({

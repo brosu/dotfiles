@@ -4871,7 +4871,7 @@
                   {
                     "key_code": "left_arrow",
                     "modifiers": [
-                      "control"
+                      "option"
                     ]
                   }
                 ],
@@ -4892,7 +4892,7 @@
                   {
                     "key_code": "down_arrow",
                     "modifiers": [
-                      "control"
+                      "option"
                     ]
                   }
                 ],
@@ -4913,7 +4913,7 @@
                   {
                     "key_code": "up_arrow",
                     "modifiers": [
-                      "control"
+                      "option"
                     ]
                   }
                 ],
@@ -4934,7 +4934,7 @@
                   {
                     "key_code": "right_arrow",
                     "modifiers": [
-                      "control"
+                      "option"
                     ]
                   }
                 ],
@@ -5111,7 +5111,7 @@
                   {
                     "key_code": "left_arrow",
                     "modifiers": [
-                      "option"
+                      "control"
                     ]
                   }
                 ],
@@ -5132,7 +5132,7 @@
                   {
                     "key_code": "down_arrow",
                     "modifiers": [
-                      "option"
+                      "control"
                     ]
                   }
                 ],
@@ -5153,7 +5153,7 @@
                   {
                     "key_code": "up_arrow",
                     "modifiers": [
-                      "option"
+                      "control"
                     ]
                   }
                 ],
@@ -5174,7 +5174,7 @@
                   {
                     "key_code": "right_arrow",
                     "modifiers": [
-                      "option"
+                      "control"
                     ]
                   }
                 ],
@@ -5227,7 +5227,7 @@
                   {
                     "key_code": "left_arrow",
                     "modifiers": [
-                      "control"
+                      "option"
                     ]
                   }
                 ],
@@ -5248,7 +5248,7 @@
                   {
                     "key_code": "down_arrow",
                     "modifiers": [
-                      "control"
+                      "option"
                     ]
                   }
                 ],
@@ -5269,7 +5269,7 @@
                   {
                     "key_code": "up_arrow",
                     "modifiers": [
-                      "control"
+                      "option"
                     ]
                   }
                 ],
@@ -5290,7 +5290,7 @@
                   {
                     "key_code": "right_arrow",
                     "modifiers": [
-                      "control"
+                      "option"
                     ]
                   }
                 ],
@@ -5467,7 +5467,7 @@
                   {
                     "key_code": "left_arrow",
                     "modifiers": [
-                      "option"
+                      "control"
                     ]
                   }
                 ],
@@ -5488,7 +5488,7 @@
                   {
                     "key_code": "down_arrow",
                     "modifiers": [
-                      "option"
+                      "control"
                     ]
                   }
                 ],
@@ -5509,7 +5509,7 @@
                   {
                     "key_code": "up_arrow",
                     "modifiers": [
-                      "option"
+                      "control"
                     ]
                   }
                 ],
@@ -5530,7 +5530,7 @@
                   {
                     "key_code": "right_arrow",
                     "modifiers": [
-                      "option"
+                      "control"
                     ]
                   }
                 ],
