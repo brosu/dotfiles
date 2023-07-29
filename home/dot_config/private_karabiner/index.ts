@@ -21,6 +21,7 @@ import {
   MultiModifierAlias,
   multiModifierAliases,
   toRemoveNotificationMessage,
+  toApp,
 } from "https://deno.land/x/karabinerts@1.23.0/deno.ts";
 
 type Key = LetterKeyCode | KeyAlias;
@@ -62,6 +63,11 @@ export const arrowMode = {
   7: toKey("↓", "⌥"),
   8: toKey("↑", "⌥"),
   9: toKey("→", "⌥"),
+
+  s: toApp("Slack"),
+  v: toApp("Vivaldi"),
+  c: toApp("Cron"),
+  t: toApp("Teams"),
 };
 
 const withShift = (e: ToEvent) => ({

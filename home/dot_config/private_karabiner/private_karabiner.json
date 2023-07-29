@@ -5185,6 +5185,78 @@
                     "value": 1
                   }
                 ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Slack\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "duo-layer-f-;",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "v"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Vivaldi\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "duo-layer-f-;",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "c"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Cron\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "duo-layer-f-;",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "t"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Teams\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "duo-layer-f-;",
+                    "value": 1
+                  }
+                ]
               }
             ]
           },
@@ -5532,6 +5604,78 @@
                     "modifiers": [
                       "control"
                     ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "layer-caps_lock",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Slack\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "layer-caps_lock",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "v"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Vivaldi\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "layer-caps_lock",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "c"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Cron\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "layer-caps_lock",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "t"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Teams\".app"
                   }
                 ],
                 "conditions": [
