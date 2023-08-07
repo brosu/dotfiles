@@ -13,6 +13,7 @@ local keymap = vim.keymap -- for conciseness
 -- See `:help vim.keymap.set()`
 keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 keymap.set("n", ",", "<CMD>WhichKey<CR>")
+keymap.set({ "t", "n" }, "<C-t>", "<CMD>ToggleTerm <CR>")
 -- Remap for dealing with word wrap
 keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })

@@ -49,6 +49,7 @@ local supporting_plugins = {
 local navigation_plugins = {
   "christoomey/vim-tmux-navigator", -- tmux & split window navigation
   "szw/vim-maximizer", -- maximizes and restores current window
+  "akinsho/toggleterm.nvim",
   "nvim-tree/nvim-tree.lua", -- file explorer
 }
 
@@ -85,7 +86,7 @@ local lsp_plugins = {
 local integration_plugins = {
   "rmagatti/auto-session",
   "AmeerTaweel/todo.nvim",
-  "hkupty/iron.nvim", -- Interactive Repls Over Neovim
+  "vigemus/iron.nvim", -- Interactive Repls Over Neovim
   -- "puremourning/vimspector",
   "mfussenegger/nvim-dap",
   "mfussenegger/nvim-dap-python",
