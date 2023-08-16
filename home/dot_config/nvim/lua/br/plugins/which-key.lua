@@ -60,6 +60,10 @@ local keymap = {
   q = { "<CMD>q<CR>", "Buffer" },
   Q = { "<CMD>qa<CR>", "vi" },
   w = { "<CMD>w<CR>", "Write" },
+  r = {
+    name = "Run",
+    f = { "<Cmd>RunFile<CR>", "file" },
+  },
 }
 function setFugitiveDocs()
   whichkey.register({

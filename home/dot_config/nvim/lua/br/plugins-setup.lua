@@ -44,6 +44,7 @@ end
 
 local supporting_plugins = {
   "nvim-lua/plenary.nvim", -- lua functions that many plugins use
+  "sindrets/diffview.nvim",
 }
 
 local navigation_plugins = {
@@ -92,6 +93,7 @@ local integration_plugins = {
   "mfussenegger/nvim-dap-python",
   "rcarriga/nvim-dap-ui",
   "theHamsta/nvim-dap-virtual-text",
+  "CRAG666/code_runner.nvim",
 }
 
 local visual_plugins = {

@@ -14,3 +14,4 @@ alias lt='exa --tree --level=2'
 ## Sorts
 alias llm='exa -lbF --git --sort=modified'
 alias lld='exa -lbhHFGmuSa --group-directories-first'
+alias ce='chezmoi edit --apply'

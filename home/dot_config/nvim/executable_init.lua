@@ -20,6 +20,7 @@ require("br.core.keymaps")
 require("br.plugins.which-key")
 require("br.plugins.hydra")
 require("br.plugins.onedark")
+require("br.plugins.code_runner")
 
 -- Enable Comment.nvim
 require("Comment").setup()

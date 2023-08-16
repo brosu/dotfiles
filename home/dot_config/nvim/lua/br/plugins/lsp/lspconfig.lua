@@ -116,3 +116,4 @@ lspconfig["yamlls"].setup({
     },
   },
 })
+lspconfig.pyright.setup({})

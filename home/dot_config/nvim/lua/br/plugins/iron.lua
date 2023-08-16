@@ -24,7 +24,7 @@ iron.setup({
   keymaps = {
     send_motion = "<space>rc",
     visual_send = "<space>rc",
-    send_file = "<space>rf",
+    -- send_file = "<space>rf",
     send_line = "<space>rl",
     send_mark = "<space>rm",
     mark_motion = "<space>rc",
