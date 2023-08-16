@@ -146,6 +146,7 @@ return packer.startup(function(use)
   use("TimUntersberger/neogit")
   use("tpope/vim-rhubarb")
   use("lewis6991/gitsigns.nvim")
+  use("idanarye/vim-merginal")
 
   -- Fuzzy Finder (files, lsp, etc)
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x", requires = { "nvim-lua/plenary.nvim" } })
