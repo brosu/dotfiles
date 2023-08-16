@@ -1,0 +1,9 @@
+enter ~/([^/]+)
+  echo "enter"
+  if [ -r venv ]; then
+    . ./venv/bin/activate
+  fi
+
+leave ~/(.+)
+  echo "exit"
+  deactivate > /dev/null 2>&1

@@ -39,3 +39,4 @@ install:
     - diff-so-fancy
     - exa
     - karabiner-elements
+    - ondir
