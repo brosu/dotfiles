@@ -32,7 +32,8 @@ mason_lspconfig.setup({
     "tailwindcss",
     "lua_ls",
     "emmet_ls",
-    "pyright",
+    "pylsp",
+    -- "pyright",
   },
   -- auto-install configured servers (with lspconfig)
   automatic_installation = true, -- not the same as ensure_installed
@@ -46,7 +47,8 @@ mason_null_ls.setup({
     "eslint_d", -- ts/js linter
     "bash-language-server",
     "beautysh",
-    "yapf",
+    "jedi-language-server",
+    "black",
   },
   -- auto-install configured formatters & linters (with null-ls)
   automatic_installation = true,

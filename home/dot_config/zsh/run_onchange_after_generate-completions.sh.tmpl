@@ -10,6 +10,7 @@ if [ "$(command -v bw)" ]; then
   bw completion --shell zsh > "{{ $compDir }}/_bw"
 fi
 
+
 if [ "$(command -v chezmoi)" ]; then
   chezmoi completion zsh > "{{ $compDir }}/_chezmoi"
 fi

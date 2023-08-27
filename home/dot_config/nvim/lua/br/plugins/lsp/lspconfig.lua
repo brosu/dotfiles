@@ -1,3 +1,11 @@
+local standard_servers = {
+  "html",
+  "tailwindcss",
+  "cssls",
+  "pylsp",
+  -- "pyright",
+}
+
 -- import lspconfig plugin safely
 local lspconfig_status, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status then
@@ -60,7 +68,6 @@ for type, icon in pairs(signs) do
 end
 
 -- configure standard servers
-local standard_servers = { "html", "tailwindcss", "cssls" }
 for _, value in ipairs(standard_servers) do
   lspconfig[value].setup({
     capabilities = capabilities,
@@ -116,4 +123,7 @@ lspconfig["yamlls"].setup({
     },
   },
 })
-lspconfig.pyright.setup({})
+
+-- lspconfig.jedi_language_server.setup({
+--   on_attach = on_attach,
+-- })

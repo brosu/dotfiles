@@ -40,3 +40,4 @@ install:
     - exa
     - karabiner-elements
     - ondir
+    - python-lsp-server

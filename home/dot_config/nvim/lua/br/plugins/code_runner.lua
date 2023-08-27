@@ -12,7 +12,13 @@ code_runner.setup({
       "javac $fileName &&",
       "java $fileNameWithoutExt",
     },
-    python = "python3 -u",
+    python = {
+      "if [ -f .env ]; then export $(cat ./.env | xargs); fi &&",
+      "cd $dir &&",
+      ". ./venv/bin/activate &&",
+      "python3 -u $fileName &&",
+      "cd -",
+    },
     typescript = "deno run",
     rust = {
       "cd $dir &&",
