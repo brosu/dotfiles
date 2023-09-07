@@ -1,0 +1,4 @@
+export keepass_bin=/Applications/KeePassXC.app/Contents/MacOS/keepassxc-cli
+export db_path=~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Passwords.kdbx
+db_password=$(security find-generic-password -a keepass -w)
+echo "${db_password}" | ${keepass_bin} export -f csv "${db_path}" | awk -F"," ' $1=="\"Root/secrets/docker\"" {key=substr($2,2,length($2)-2); value=substr($4,2,length($4)-2); print key "=" value }' |sed 's/""/"/'
