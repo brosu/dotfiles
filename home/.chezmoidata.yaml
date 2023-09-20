@@ -41,3 +41,7 @@ install:
     - karabiner-elements
     - ondir
     - python-lsp-server
+    - rtx
+  rtx:
+    - java@temurin-11
+    - java@temurin-17

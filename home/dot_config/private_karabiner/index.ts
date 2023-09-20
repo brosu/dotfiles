@@ -74,8 +74,29 @@ const withShift = (e: ToEvent) => ({
   ...e,
   modifiers: [...(e.modifiers || []), "shift"],
 });
+
 export const arrowShift = Object.entries(arrowMode).reduce(
   (r, [k, v]) => ({ ...r, [k]: withShift(v) }),
+  {}
+);
+
+const withCommand = (e: ToEvent) => ({
+  ...e,
+  modifiers: [...(e.modifiers || []), "⌘"],
+});
+
+export const arrowCommand = Object.entries(arrowMode).reduce(
+  (r, [k, v]) => ({ ...r, [k]: withCommand(v) }),
+  {}
+);
+
+const withOption = (e: ToEvent) => ({
+  ...e,
+  modifiers: [...(e.modifiers || []), "⌥"],
+});
+
+export const arrowOption = Object.entries(arrowMode).reduce(
+  (r, [k, v]) => ({ ...r, [k]: withOption(v) }),
   {}
 );
 
@@ -146,6 +167,8 @@ const rules = [
   // map("⇪").toIfAlone(toKey("⎋")),
   // map("⇪").toKey("⎋"),
   duoLayer("f", ";").manipulators(arrowMode).notification("Arrow ← → ↑ ↓"),
+  duoLayer(toKey("⇪"), "⌘").manipulators(withCommand),
+  duoLayer(toKey("⇪"), "⌥").manipulators(withOption),
   layer("⇪")
     .manipulators(arrowMode)
     .configKey((v) => v.toIfAlone("⎋"), true),

@@ -10,3 +10,5 @@ if [ -f ~/.bashrc ]; then
     grep -rne "brew shellenv" ~/.bashrc > /dev/null || \
         echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
 fi
+
+rtx install {{ join " " $.install.rtx}}
