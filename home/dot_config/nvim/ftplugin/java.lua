@@ -1,13 +1,13 @@
 local pkg_status, jdtls = pcall(require, "jdtls")
 if not pkg_status then
-  vim.notify("unable to load nvim-jdtls", "error")
+  vim.notify("unable to load nvim-jdtls", 1)
   return
 end
-
+vim.notify("java detected", 1)
 local home = os.getenv("HOME")
 -- File types that signify a Java project's root directory. This will be
 -- used by eclipse to determine what constitutes a workspace
-local root_markers = { "gradlew", "mvnw", ".git" }
+local root_markers = { "gradlew", "mvnw", ".git", "pom.xml" }
 local root_dir = require("jdtls.setup").find_root(root_markers)
 
 -- eclipse.jdt.ls stores project specific data within a folder. If you are working
@@ -79,7 +79,7 @@ local config = {
           -- Use Google Java style guidelines for formatting
           -- To use, make sure to download the file from https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml
           -- and place it in the ~/.local/share/eclipse directory
-          url = "/.local/share/eclipse/eclipse-java-google-style.xml",
+          url = home .. "/.local/share/eclipse/eclipse-java-google-style.xml",
           profile = "GoogleStyle",
         },
       },
@@ -128,17 +128,17 @@ local config = {
       -- The `name` is NOT arbitrary, but must match one of the elements from `enum ExecutionEnvironment` in the link above
       configuration = {
         runtimes = {
-          {
-            name = "JavaSE-17",
-            path = home .. "/.asdf/installs/java/corretto-17.0.4.9.1",
-          },
-          {
-            name = "JavaSE-11",
-            path = home .. "/.asdf/installs/java/corretto-11.0.16.9.1",
-          },
+          -- {
+          --   name = "JavaSE-17",
+          --   path = home .. "/.asdf/installs/java/corretto-17.0.4.9.1",
+          -- },
+          -- {
+          --   name = "JavaSE-11",
+          --   path = home .. "/.asdf/installs/java/corretto-11.0.16.9.1",
+          -- },
           {
             name = "JavaSE-1.8",
-            path = home .. "/.asdf/installs/java/corretto-8.352.08.1",
+            path = vim.fn.glob("/Users/bogdan.rosu/.local/share/rtx/installs/java/temurin-17*"),
           },
         },
       },
@@ -170,12 +170,12 @@ local config = {
     -- The jar file is located where jdtls was installed. This will need to be updated
     -- to the location where you installed jdtls
     "-jar",
-    vim.fn.glob("/opt/homebrew/Cellar/jdtls/1.23.0/libexec/plugins/org.eclipse.equinox.launcher_*.jar"),
+    vim.fn.glob("/opt/homebrew/Cellar/jdtls/**/org.eclipse.equinox.launcher_*.jar"),
 
     -- The configuration for jdtls is also placed where jdtls was installed. This will
     -- need to be updated depending on your environment
     "-configuration",
-    "/opt/homebrew/Cellar/jdtls/1.23.0/libexec/config_mac",
+    vim.fn.glob("/opt/homebrew/Cellar/jdtls/**/libexec/config_mac"),
 
     -- Use the workspace_folder defined above to store data for this project
     "-data",

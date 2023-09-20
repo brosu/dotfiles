@@ -11,4 +11,4 @@ if [ -f ~/.bashrc ]; then
         echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
 fi
 
-rtx install {{ join " " $.install.rtx}}
+rtx global {{ join " " $.install.rtx}}
