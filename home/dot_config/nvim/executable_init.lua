@@ -34,6 +34,7 @@ require("neogit").setup()
 require("luasnip")
 require("todo").setup()
 require("glow").setup()
+-- require("vim-sneak").setup()
 require("toggleterm").setup({
   direction = "float",
 })

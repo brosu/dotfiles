@@ -52,6 +52,9 @@ local navigation_plugins = {
   "szw/vim-maximizer", -- maximizes and restores current window
   "akinsho/toggleterm.nvim",
   "nvim-tree/nvim-tree.lua", -- file explorer
+  -- "easymotion/vim-easymotion",
+  -- "justinmk/vim-sneak",
+  "smoka7/hop.nvim",
 }
 
 local autocomplete_plugins = {

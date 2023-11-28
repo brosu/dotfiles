@@ -31,6 +31,6 @@ vim.o.completeopt = "menuone,noselect"
 
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
-opt.foldlevel = 2
+opt.foldlevel = 20
 opt.clipboard:append("unnamedplus")
 opt.timeoutlen = 0
