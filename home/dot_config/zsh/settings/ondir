@@ -1,4 +1,9 @@
 eval_ondir() {
   eval "`ondir \"$OLDPWD\" \"$PWD\"`"
+#  echo "ondir evaled"
 }
 chpwd_functions=( eval_ondir $chpwd_functions )
+precmd_functions=( $precmd_functions eval_ondir )
+
+OLDPWD=/
+which python
