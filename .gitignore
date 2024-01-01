@@ -8,7 +8,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -71,3 +72,4 @@ zsdoc/data
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,zsh
 *.profraw
+**packer_compiled.lua
