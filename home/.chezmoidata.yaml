@@ -34,14 +34,16 @@ install:
     - wget
     - txn2/tap/kubefwd
     - kubectx
-    - multipass
+    # - multipass
     - helm
     - diff-so-fancy
     - exa
-    - karabiner-elements
+    # - karabiner-elements
     - ondir
     - python-lsp-server
-    - rtx
+    - jdx/tap/rtx
+    - sops
+    - age
   rtx:
     - java@temurin-17
     - java@temurin-11

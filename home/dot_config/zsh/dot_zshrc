@@ -11,8 +11,11 @@ autoload -U promptinit; promptinit
 prompt pure
 export PURE_PROMPT_SYMBOL='>' # https://github.com/sindresorhus/pure/issues/561
 
+export DOCKER_HOST=$(docker context inspect | jq '.[0].Endpoints.docker.Host' | sed 's/"//g')
+
 fpath=(
     $ZDOTDIR/completions
     # $ASDF_DATA_DIR/completions
     $fpath
 )
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"

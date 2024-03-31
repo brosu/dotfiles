@@ -22,6 +22,7 @@ import {
   multiModifierAliases,
   toRemoveNotificationMessage,
   toApp,
+  withModifier,
 } from "https://deno.land/x/karabinerts@1.23.0/deno.ts";
 
 type Key = LetterKeyCode | KeyAlias;
@@ -43,62 +44,35 @@ export function duoModifier(
     .to(`left_${parsedModifiers[0]}`, parsedModifiers.slice(1));
 }
 
-export const arrowMode = {
-  h: toKey("←"),
-  j: toKey("↓"),
-  k: toKey("↑"),
-  l: toKey("→"),
+export const arrowMode = [
+  withModifier('??')({
+    h: toKey("←"),
+    j: toKey("↓"),
+    k: toKey("↑"),
+    l: toKey("→"),
+  }),
+  {
+    n: toKey("←", "⌘"),
+    m: toKey("↓", "⌘"),
+    ",": toKey("↑", "⌘"),
+    ".": toKey("→", "⌘"),
 
-  n: toKey("←", "⌘"),
-  m: toKey("↓", "⌘"),
-  ",": toKey("↑", "⌘"),
-  ".": toKey("→", "⌘"),
+    y: toKey("←", "⌃"),
+    u: toKey("↓", "⌃"),
+    i: toKey("↑", "⌃"),
+    o: toKey("→", "⌃"),
 
-  y: toKey("←", "⌃"),
-  u: toKey("↓", "⌃"),
-  i: toKey("↑", "⌃"),
-  o: toKey("→", "⌃"),
+    6: toKey("←", "⌥"),
+    7: toKey("↓", "⌥"),
+    8: toKey("↑", "⌥"),
+    9: toKey("→", "⌥"),
 
-  6: toKey("←", "⌥"),
-  7: toKey("↓", "⌥"),
-  8: toKey("↑", "⌥"),
-  9: toKey("→", "⌥"),
-
-  s: toApp("Slack"),
-  v: toApp("Vivaldi"),
-  c: toApp("Cron"),
-  t: toApp("Teams"),
-};
-
-const withShift = (e: ToEvent) => ({
-  ...e,
-  modifiers: [...(e.modifiers || []), "shift"],
-});
-
-export const arrowShift = Object.entries(arrowMode).reduce(
-  (r, [k, v]) => ({ ...r, [k]: withShift(v) }),
-  {}
-);
-
-const withCommand = (e: ToEvent) => ({
-  ...e,
-  modifiers: [...(e.modifiers || []), "⌘"],
-});
-
-export const arrowCommand = Object.entries(arrowMode).reduce(
-  (r, [k, v]) => ({ ...r, [k]: withCommand(v) }),
-  {}
-);
-
-const withOption = (e: ToEvent) => ({
-  ...e,
-  modifiers: [...(e.modifiers || []), "⌥"],
-});
-
-export const arrowOption = Object.entries(arrowMode).reduce(
-  (r, [k, v]) => ({ ...r, [k]: withOption(v) }),
-  {}
-);
+    s: toApp("Slack"),
+    v: toApp("Vivaldi"),
+    c: toApp("Cron"),
+    t: toApp("Teams"),
+  }
+];
 
 export const deleteMode = {
   j: toKey("⌫"),
@@ -167,9 +141,16 @@ const rules = [
   // map("⇪").toIfAlone(toKey("⎋")),
   // map("⇪").toKey("⎋"),
   duoLayer("f", ";").manipulators(arrowMode).notification("Arrow ← → ↑ ↓"),
-  duoLayer(toKey("⇪"), "⌘").manipulators(withCommand),
-  duoLayer(toKey("⇪"), "⌥").manipulators(withOption),
+  // duoLayer("⇪", "⌘").manipulators(withCommand),
+  // duoLayer("⇪", "command").manipulators(arrowMode),
+  // duoLayer("⇪", "⌥").manipulators(withOption),
+  
+  // layer("⇪","caps_cmd")
+  //   .modifiers("⌘")
+  //   .manipulators(arrowCommand),
+
   layer("⇪")
+    // .modifiers("⌘")
     .manipulators(arrowMode)
     .configKey((v) => v.toIfAlone("⎋"), true),
 ];
