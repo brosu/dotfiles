@@ -1,3 +1,7 @@
+-- This file is automatically loaded by plugins.core
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
 local opt = vim.opt -- for conciseness
 -- Set highlight on search
 vim.o.hlsearch = false
