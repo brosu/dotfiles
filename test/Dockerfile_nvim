@@ -1,0 +1,10 @@
+FROM --platform=linux/amd64 ubuntu:jammy
+
+RUN apt-get update \
+    && apt-get install -y git wget curl gcc make
+
+RUN cd /home \
+    && wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz \ 
+    && tar -zxvf nvim-linux64.tar.gz
+
+ADD ./home/dot_config/nvim /root/.config/nvim
