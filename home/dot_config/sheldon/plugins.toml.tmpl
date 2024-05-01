@@ -51,7 +51,7 @@ apply = [{{ substr 2 $new_len $apply_value }}]
 {{- end }}
 
 [templates]
-source ={{ "'{{ hooks | get: \"pre\" | nl }}{% for file in files %}source \"{{ file }}\"{% endfor %}{{ hooks | get: \"post\" | nl }}'" }}
+source = {{ "'{{ hooks?.pre | nl }}{% for file in files %}source \"{{ file }}\" {% endfor %}{{ hooks?.post | nl }}'" }}
 PATH = {{ "'export PATH=\"{{ dir }}:$PATH\"'" }}
 path = {{ "'export path=( \"{{ dir }}\" $path )'" }}
 fpath = {{ "'export fpath=( \"{{ dir }}\" $fpath )'" }}
