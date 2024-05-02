@@ -1,7 +1,7 @@
 {{ includeTemplate "brew_load" . }}
 [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-if [ "$(command -v rtx)" ]; then
-  eval "$(rtx activate zsh)"
+if [ "$(command -v mise)" ]; then
+  eval "$(mise activate zsh)"
 fi
 which python
