@@ -23,6 +23,9 @@ require("lazy").setup({
 		-- import/override with your plugins
 		{ import = "plugins" },
 		{ "kassio/neoterm" },
+		{ "ZSaberLv0/ZFVimDirDiff" },
+		{ "ZSaberLv0/ZFVimJob" },
+
 		-- { "olimorris/persisted.nvim", config = true },
 	},
 	defaults = {
