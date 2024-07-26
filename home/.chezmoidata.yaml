@@ -37,7 +37,7 @@ install:
     # - multipass
     - helm
     - diff-so-fancy
-    - exa
+    - eza
     # - karabiner-elements
     - ondir
     - python-lsp-server
