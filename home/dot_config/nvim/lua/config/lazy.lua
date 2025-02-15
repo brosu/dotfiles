@@ -20,12 +20,12 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.go" },
 		{ import = "lazyvim.plugins.extras.lang.helm" },
 		{ import = "lazyvim.plugins.extras.lang.python" },
+		{ import = "lazyvim.plugins.extras.coding.yanky" },
 		-- import/override with your plugins
 		{ import = "plugins" },
 		{ "kassio/neoterm" },
 		{ "ZSaberLv0/ZFVimDirDiff" },
 		{ "ZSaberLv0/ZFVimJob" },
-
 		-- { "olimorris/persisted.nvim", config = true },
 	},
 	defaults = {

@@ -44,6 +44,8 @@ install:
     - mise
     - sops
     - age
+    - maccy
+    - font-hack-nerd-font
   mise:
     - java@temurin-17
     - java@temurin-11

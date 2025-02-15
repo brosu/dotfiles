@@ -1,1 +1,2 @@
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
+function dirdiff() {c='call ZFDirDiff("'$1'","'$2'")'; echo \'$c\'; nvim -c $c }

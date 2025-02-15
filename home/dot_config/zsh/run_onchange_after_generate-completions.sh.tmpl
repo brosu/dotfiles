@@ -42,3 +42,7 @@ fi
 if [ "$(command -v yq)" ]; then
   yq shell-completion zsh > "{{ $compDir }}/_yq"
 fi
+
+if [ "$(command -v gh)" ]; then
+  gh completion -s zsh > "{{ $compDir }}/_gh"
+fi

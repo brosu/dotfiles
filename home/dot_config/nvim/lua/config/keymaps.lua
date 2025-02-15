@@ -30,10 +30,7 @@ keymap.set("n", "<leader>q", "<cmd>q<cr>", { desc = "quit window" })
 keymap.set("n", "<leader>t", "<cmd>TREPLSendLine<cr>", { desc = "Execute line" })
 keymap.set("v", "<leader>t", "<cmd>TREPLSendSelection<cr>", { desc = "Execute selection" })
 
-keymap.del("n", "<leader>ww")
-keymap.del("n", "<leader>wd")
-keymap.del("n", "<leader>w-")
-keymap.del("n", "<leader>w|")
+keymap.set("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
 
 -- -- place this in one of your configuration file(s)
 -- local hop = require("hop")
