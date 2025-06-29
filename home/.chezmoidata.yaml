@@ -48,6 +48,7 @@ install:
     - font-hack-nerd-font
     - jstkdng/programs/ueberzugpp
     - hammerspoon
+    - mutagen-io/mutagen/mutagen
   mise:
     - java@temurin-11
     - java@temurin-17
