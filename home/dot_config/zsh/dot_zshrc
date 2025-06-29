@@ -19,3 +19,5 @@ fpath=(
     $fpath
 )
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export OPENAI_API_BASE=http://localhost:1234/v1
+export OPENAI_API_KEY=dummy

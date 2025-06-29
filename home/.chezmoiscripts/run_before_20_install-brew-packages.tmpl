@@ -4,11 +4,13 @@
 
 # https://github.com/Homebrew/homebrew-bundle
 brew update
+brew upgrade
 brew install {{ join " " $.install.brew }}
-
+brew cleanup
 if [ -f ~/.bashrc ]; then
     grep -rne "brew shellenv" ~/.bashrc > /dev/null || \
         echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
 fi
 
-mise global {{ join " " $.install.mise}}
+mise use -g {{ join " " $.install.mise }}
+npm install -g {{ join " " $.install.npm }}

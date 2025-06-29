@@ -46,3 +46,7 @@ fi
 if [ "$(command -v gh)" ]; then
   gh completion -s zsh > "{{ $compDir }}/_gh"
 fi
+
+if [ "$(command -v mise)" ]; then
+  mise completion zsh > "{{ $compDir }}/_mise"
+fi
