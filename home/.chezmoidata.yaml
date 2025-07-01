@@ -49,6 +49,7 @@ install:
     - jstkdng/programs/ueberzugpp
     - hammerspoon
     - mutagen-io/mutagen/mutagen
+    - fd
   mise:
     - java@temurin-11
     - java@temurin-17
