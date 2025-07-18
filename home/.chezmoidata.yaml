@@ -15,7 +15,6 @@ install:
     - autojump
     - docker-compose
     - fzf
-    - how2terminal/how2/how2
     - jdtls
     - jq
     - k9s
@@ -52,9 +51,7 @@ install:
     - fd
     - zellij
   mise:
-    - java@temurin-11
     - java@temurin-17
-    - python@3.11
     - python@3.12
     - node@22
   npm:

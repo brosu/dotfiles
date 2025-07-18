@@ -32,6 +32,12 @@ keymap.set("v", "<leader>t", "<cmd>TREPLSendSelection<cr>", { desc = "Execute se
 
 keymap.set("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
 
+-- keymap.set({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
+-- keymap.set({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
+-- keymap.set({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
+-- keymap.set({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
+-- keymap.set({ "n", "t" }, "<C-p>", "<CMD>NavigatorPrevious<CR>")
+
 -- -- place this in one of your configuration file(s)
 -- local hop = require("hop")
 -- local directions = require("hop.hint").HintDirection

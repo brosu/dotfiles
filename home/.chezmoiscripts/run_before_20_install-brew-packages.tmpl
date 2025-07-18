@@ -4,13 +4,19 @@
 
 # https://github.com/Homebrew/homebrew-bundle
 brew update
+brew outdated --json \
+    | jq -r '.formulae + .casks | .[].name' \
+    | xargs -P0 -L1 brew fetch
 brew upgrade
-brew install {{ join " " $.install.brew }}
+brew install --quiet {{ join " " $.install.brew }}
 brew cleanup
+
 if [ -f ~/.bashrc ]; then
     grep -rne "brew shellenv" ~/.bashrc > /dev/null || \
         echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
 fi
 
 mise use -g {{ join " " $.install.mise }}
+
+npm update -g
 npm install -g {{ join " " $.install.npm }}
