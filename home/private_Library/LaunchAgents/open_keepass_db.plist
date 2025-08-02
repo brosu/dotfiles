@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+      <!-- YOUR SELF-CHOSEN *UNIQUE* LABEL (TASK ID) HERE -->
+    <string>Start_keepass_at_login</string>
+    <key>ProgramArguments</key>
+        <array>
+            <string>/Users/bogdan.rosu/Documents/personal_sources/init/custom_scripts/open_keepass_db.sh</string>
+        </array>
+    <key>StandardOutPath</key>
+    <string>/tmp/start_keepass_at_login</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/start_keepass_at_login</string>
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>

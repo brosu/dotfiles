@@ -59,3 +59,19 @@ keymap.set("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
 -- vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 -- vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
 -- vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
+
+local ss = require("smart-splits")
+local map = vim.keymap.set
+local opts = { noremap = true, silent = true }
+
+-- Pane navigation
+map("n", "<C-h>", ss.move_cursor_left, opts)
+map("n", "<C-j>", ss.move_cursor_down, opts)
+map("n", "<C-k>", ss.move_cursor_up, opts)
+map("n", "<C-l>", ss.move_cursor_right, opts)
+
+-- Resize splits using Alt
+map("n", "<M-h>", ss.resize_left, opts)
+map("n", "<M-j>", ss.resize_down, opts)
+map("n", "<M-k>", ss.resize_up, opts)
+map("n", "<M-l>", ss.resize_right, opts)
