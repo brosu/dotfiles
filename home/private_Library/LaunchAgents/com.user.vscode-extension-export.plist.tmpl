@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.{{ .chezmoi.username }}.vscode-extension-export</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>{{ .chezmoi.homeDir }}/.local/bin/export-vscode-extensions.sh</string>
+  </array>
+
+  <key>WatchPaths</key>
+  <array>
+    <string>/Applications/Visual Studio Code.app</string>
+  </array>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/vscode-extension-export.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/tmp/vscode-extension-export.err</string>
+</dict>
+</plist>

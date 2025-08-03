@@ -1,0 +1,29 @@
+{
+  "editor.accessibilitySupport": "off",
+  "editor.stickyScroll.enabled": true,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.fontFamily": "Monaco, Hack, Menlo, 'Courier New', monospace",
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "Visual Studio Dark",
+  "git.openRepositoryInParentFolders": "always",
+  "editor.rulers": [
+    120
+  ],
+  "editor.minimap.enabled": false,
+  "debug.console.closeOnEnd": true,
+  "debug.openDebug": "neverOpen",
+  "editor.lineNumbers": "relative",
+  "window.commandCenter": false,
+  "window.zoomLevel": 1,
+  "extensions.verifySignature": false,
+  "remote.autoForwardPortsSource": "hybrid",
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "markdown-preview-enhanced.revealjsTheme": "night.css",
+  "markdown-preview-enhanced.enablePreviewZenMode": true,
+  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/code-nvim",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  }
+}
