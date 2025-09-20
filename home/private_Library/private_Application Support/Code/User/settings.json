@@ -22,8 +22,150 @@
   "markdown-preview-enhanced.revealjsTheme": "night.css",
   "markdown-preview-enhanced.enablePreviewZenMode": true,
   "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
-  "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/code-nvim",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
-  }
+  },
+  "vim.easymotion": true,
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "vspacecode.space"
+      ]
+    },
+    {
+      "before": [
+        ","
+      ],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "vspacecode.space"
+      ]
+    },
+    {
+      "before": [
+        ","
+      ],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    }
+  ],
+  "vim.foldfix": true,
+  "vspacecode.bindingOverrides": [
+    {
+      "keys": "0-9",
+      "name": "Focus nth window",
+      "icon": "arrow-both",
+      "type": "command",
+    },
+    {
+      "keys": "0",
+      "name": "Focus on files explorer",
+      "icon": "list-tree",
+      "type": "command",
+      "command": "workbench.files.action.focusFilesExplorer",
+      "display": "hidden"
+    },
+    {
+      "keys": "1",
+      "name": "Focus 1st window",
+      "icon": "files",
+      "type": "command",
+      "command": "workbench.action.focusFirstEditorGroup",
+      "display": "hidden"
+    },
+    {
+      "keys": "2",
+      "name": "Focus 2nd window",
+      "icon": "files",
+      "type": "command",
+      "command": "workbench.action.focusSecondEditorGroup",
+      "display": "hidden"
+    },
+    {
+      "keys": "3",
+      "name": "Focus 3rd window",
+      "icon": "files",
+      "type": "command",
+      "command": "workbench.action.focusThirdEditorGroup",
+      "display": "hidden"
+    },
+    {
+      "keys": "4",
+      "name": "Focus 4th window",
+      "icon": "files",
+      "type": "command",
+      "command": "workbench.action.focusFourthEditorGroup",
+      "display": "hidden"
+    },
+    {
+      "keys": "5",
+      "name": "Focus 5th window",
+      "icon": "files",
+      "type": "command",
+      "command": "workbench.action.focusFifthEditorGroup",
+      "display": "hidden"
+    },
+    {
+      "keys": "6",
+      "name": "Focus 6th window",
+      "icon": "files",
+      "type": "command",
+      "command": "workbench.action.focusSixthEditorGroup",
+      "display": "hidden"
+    },
+    {
+      "keys": "7",
+      "name": "Focus 7th window",
+      "icon": "files",
+      "type": "command",
+      "command": "workbench.action.focusSeventhEditorGroup",
+      "display": "hidden"
+    },
+    {
+      "keys": "8",
+      "name": "Focus 8th window",
+      "icon": "files",
+      "type": "command",
+      "command": "workbench.action.focusEighthEditorGroup",
+      "display": "hidden"
+    },
+  ],
 }

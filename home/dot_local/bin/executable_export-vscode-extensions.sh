@@ -4,7 +4,7 @@
 DOTFILES_DIR="$(chezmoi source-path)"
 
 # Target path for the exported extensions list
-EXT_FILE="$DOTFILES_DIR/private_Library/private_Application Support/Code/User/extensions.txt"
+EXT_FILE="$DOTFILES_DIR/vscode/extensions.txt"
 
 echo "[vscode] Exporting extensions to: $EXT_FILE"
 

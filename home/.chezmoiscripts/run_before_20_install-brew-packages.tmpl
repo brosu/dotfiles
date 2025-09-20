@@ -1,5 +1,7 @@
 #!/bin/sh
 
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 {{ includeTemplate "brew_load" . }}
 
 # https://github.com/Homebrew/homebrew-bundle
